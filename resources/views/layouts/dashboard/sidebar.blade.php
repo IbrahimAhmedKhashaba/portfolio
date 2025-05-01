@@ -23,7 +23,7 @@
     <hr class="sidebar-divider my-0">
 
 
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#adminsManagement"
                 aria-expanded="true" aria-controls="adminsManagement">
                 <i class="fas fa-fw fa-user-plus"></i>
@@ -36,7 +36,7 @@
                     <a class="collapse-item" href="">Create Admin</a>
                 </div>
             </div>
-        </li>
+        </li> --}}
 
 
     
@@ -50,16 +50,15 @@
     <!-- Nav Item - Pages Collapse Menu -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                aria-expanded="true" aria-controls="collapsePages">
-                <i class="fas fa-fw fa-users"></i>
-                <span>Users</span>
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Expertise"
+                aria-expanded="true" aria-controls="Expertise">
+                <i class="fas fa-cogs"></i>
+                <span>Expertise</span>
             </a>
-            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div id="Expertise" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Users Management:</h6>
-                    <a class="collapse-item" href="">Users Table</a>
-                    <a class="collapse-item" href="">Create User</a>
+                    <h6 class="collapse-header">Expertise Management:</h6>
+                    <a class="collapse-item" href="{{ route('dashboard.expertise.index') }}">Expertise Table</a>
                 </div>
             </div>
         </li>
@@ -67,6 +66,25 @@
 
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
+
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Contacts"
+            aria-expanded="true" aria-controls="Contacts">
+            <i class="fas fa-fw fa-phone"></i>
+            <span>Contacts</span>
+        </a>
+        <div id="Contacts" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Contacts Management:</h6>
+                <a class="collapse-item" href="{{ route('dashboard.contacts.index') }}">Contacts Table</a>
+            </div>
+        </div>
+    </li>
+
+
+<!-- Divider -->
+<hr class="sidebar-divider my-0">
 
 
         <li class="nav-item">
@@ -122,9 +140,9 @@
 
 
         <li class="nav-item">
-            <a class="nav-link" href="">
-                <i class="fas fa-fw fa-bell"></i>
-                <span>Notifications</span></a>
+            <a class="nav-link" href="{{ route('dashboard.settings.index') }}">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span></a>
         </li>
 
 

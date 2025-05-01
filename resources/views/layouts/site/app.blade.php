@@ -16,7 +16,7 @@
                 <h4 class="header-subtitle" >Hello, I am</h4>
                 <h1 class="header-title">{{ $settings->name }}</h1>
                 <h6 class="header-mono" >{{ $settings->position }}</h6>
-                <button class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume</button>
+                <a target="_blank" href="{{ asset('uploads/settings/'.$settings->cv) }}" class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume</a>
             </div>
         </div>
     </header>

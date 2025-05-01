@@ -5,15 +5,31 @@
             <div class="col-lg-8">
                 <div class="contact-form-card">
                     <h4 class="contact-title">Send a message</h4>
-                    <form action="">
+                    <form action="{{ route('dashboard.contact.store') }}" method="post">
+                        @csrf
                         <div class="form-group">
-                            <input  class="form-control" type="text" placeholder="Name *" required>
+                            <input name="name" class="form-control" type="text" placeholder="Name *" required>
+                            @error('name')
+                                <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                            @enderror
                         </div>
                         <div class="form-group">
-                            <input class="form-control" type="email" placeholder="Email *" required>
+                            <input name="email" class="form-control" type="email" placeholder="Email *" required>
+                            @error('email')
+                                <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                            @enderror
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" id=" placeholder="Message *" rows="7" required></textarea>
+                            <input name="phone" class="form-control" type="phone" placeholder="Phone *" required>
+                            @error('phone')
+                                <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" id=" placeholder="Message *" rows="7" required></textarea>
+                            @error('message')
+                                <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                            @enderror
                         </div>
                         <div class="form-group ">
                             <button type="submit" class="form-control btn btn-primary" >Send Message</button>

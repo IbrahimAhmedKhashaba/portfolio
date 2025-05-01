@@ -27,9 +27,12 @@ return new class extends Migration
             $table->string('linkedin');
             $table->string('github');
 
-            $table->decimal('hours_worked');
-            $table->decimal('client_count');
-            $table->decimal('cofe_drinked');
+            $table->integer('hours_worked');
+            $table->integer('client_count');
+            $table->integer('cofe_drinked');
+
+            $table->string('slider');
+            $table->string('image');
 
             $table->timestamps();
         });

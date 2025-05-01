@@ -26,5 +26,8 @@ class Setting extends Model
         'hours_worked',
         'client_count',
         'cofe_drinked',
+
+        'slider',
+        'image',
     ];
 }

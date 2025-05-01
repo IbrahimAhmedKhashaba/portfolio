@@ -65,7 +65,7 @@
 @include('site.service')
 {{-- end service section --}}
 
-<section class="section bg-custom-gray" id="price">
+{{-- <section class="section bg-custom-gray" id="price">
     <div class="container">
         <h1 class="mb-5"><span class="text-danger">Packs</span> Pricing</h1>
         <div class="row align-items-center">
@@ -139,7 +139,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <section class="section bg-dark py-5">
     <div class="container text-center">
@@ -151,10 +151,10 @@
 <!-- start portfolio section -->
 @include('site.portfolio')
 <!-- end portfolio section -->
-
+{{-- 
 <!-- start blog section -->
 @include('site.blog')
-<!-- end blog section -->
+<!-- end blog section --> --}}
 
 <!-- start contact section -->
 @include('site.contact')
